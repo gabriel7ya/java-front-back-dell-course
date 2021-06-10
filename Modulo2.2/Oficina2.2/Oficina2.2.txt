@@ -1,0 +1,12 @@
+Estados de persistência:
+	Transient:
+		Quando um objeto não é conhecido pelo banco de dados, logo, não existe relação de mapeamento entre eles.
+	
+	Managed:
+		Quando uma entidade está mapeada está managed e gerenciada pelo EntityManager, assim qualquer mudança em seu estado (como uma chamada de setter) também será refletida(dados atualizados) na base quando commitado.
+		
+	Detached:
+		Quando a entidade também está no banco, contudo não é conhecida no contexto pelo EntityManager, logo não está sendo monitorada.
+		
+	Deleted/Removed:
+		A entidade entra nesse estado quando é marcada como deletada pelo método para deletar a entidade, assim ele não é mais gerenciado pela EntityManager e não exite mais no banco de dados.
